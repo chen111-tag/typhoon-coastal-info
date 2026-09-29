@@ -2,7 +2,9 @@
 
 面向沿海居民的静态网页，展示台风名称、中心位置、移动方向与速度、中心风力，以及观测和预报路径。
 
-当前版本已接入**浙江省台风路径实时发布系统**公开数据，不再使用虚构台风。GitHub Actions 配置为每15分钟采集一次并部署到 GitHub Pages；首次上线仍需完成仓库的 Pages 设置。
+当前版本已接入**浙江省台风路径实时发布系统**公开数据，不再使用虚构台风。网站已于2026年9月29日部署到 GitHub Pages，GitHub Actions 已启用每15分钟采集与自动发布。
+
+**访问网站：[观风 · 沿海台风信息站](https://chen111-tag.github.io/typhoon-coastal-info/)**
 
 ## 使用与范围
 
@@ -29,7 +31,7 @@ npm run preview
 
 工作流：`.github/workflows/update-and-deploy.yml`。计划在每小时的第7、22、37、52分钟触发，也支持手动运行和主分支代码更新时触发。GitHub 队列可能延迟或漏执行，不能保证严格实时。
 
-部署目标：<https://chen111-tag.github.io/typhoon-coastal-info/>（启用 Pages 并成功部署后可访问）。Pages 发布包仅包含 `index.html`、样式和脚本、两份数据 JSON 及 `.nojekyll`；项目文档和研究缓存不进入网站发布包。
+网站地址：<https://chen111-tag.github.io/typhoon-coastal-info/>。Pages 发布包仅包含 `index.html`、样式和脚本、两份数据 JSON 及 `.nojekyll`；项目文档和研究缓存不进入网站发布包。仓库本身经所有者确认已公开。
 
 抓取失败时保留最近有效快照，并发布异常状态；同步超过45分钟或部分观测超过6小时会提示核对官方信息。数据未变化时每日保存一个仓库检查点，有变化时及时保存。同步故障会在发布可用缓存后使工作流标红。
 
@@ -41,4 +43,5 @@ npm run preview
 - [数据接入说明](docs/LIVE_DATA.md)：接口、字段、时间、数据校验与限制。
 - [部署与维护](docs/DEPLOYMENT.md)：GitHub Pages 设置、调度与排错。
 - [资料来源与核查表](docs/SOURCES.md)：官方说明及待确认的授权条件。
+- [上线验证记录](docs/LIVE_QA.md)：测试、真实抓取、首次部署和线上资源核验。
 - [本次实现计划](docs/superpowers/plans/2026-09-29-live-data-pages.md)。

@@ -4,9 +4,11 @@
 
 目标仓库：`chen111-tag/typhoon-coastal-info`，主分支 `main`。
 
-当前账号在私有仓库的 Pages 设置中显示“Upgrade or make this repository public to enable Pages”。可选择升级支持私有仓库 Pages 的套餐，或经仓库所有者明确同意后把仓库公开。公开将暴露仓库代码、文档和已有提交历史；不能仅为部署网站而默认更改可见性。
+2026年9月29日，仓库所有者明确同意公开仓库以启用免费 Pages；现已设为公开，Pages 的 build_type 为 workflow，HTTPS 已启用。此前私有仓库受套餐限制，已随公开设置解除。
 
-满足条件后：进入 Settings → Pages，将 Source 设为 GitHub Actions；进入 Actions → Update typhoon data and deploy Pages → Run workflow，选择 main 并运行。成功后在环境部署记录中打开网站：
+若以后改为私有，应先核对套餐是否支持该仓库的 Pages，避免网站停用。公开包含代码、文档和已有提交历史，不能仅为部署网站而默认变更仓库可见性。
+
+重新配置时：进入 Settings → Pages，将 Source 设为 GitHub Actions；手动更新时进入 Actions → Update typhoon data and deploy Pages → Run workflow，选择 main 并运行。网站：
 
 https://chen111-tag.github.io/typhoon-coastal-info/
 
