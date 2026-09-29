@@ -1,0 +1,88 @@
+name: Update typhoon data and deploy Pages
+
+on:
+  schedule:
+    # UTC, every 15 minutes; avoid the busiest top-of-hour slot.
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'assets/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'package.json'
+      - 'data/**'
+      - '.nojekyll'
+      - '.github/workflows/update-and-deploy.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    permissions:
+      contents: write
+    outputs:
+      sync_failed: ${{ steps.sync.outputs.sync_failed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test data adapter and freshness rules
+        run: npm test
+      - name: Fetch official public typhoon data
+        id: sync
+        env:
+          PREVIOUS_SNAPSHOT_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/data/typhoons.json
+        run: npm run update
+      - name: Check whether to persist data checkpoint
+        if: steps.sync.outputs.sync_failed != 'true'
+        id: checkpoint
+        run: node scripts/should-commit-data.mjs
+      - name: Persist changed observations or daily checkpoint
+        if: steps.checkpoint.outputs.changed == 'true'
+        continue-on-error: true
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/typhoons.json data/status.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'data: update official typhoon snapshot'
+            git push origin HEAD:main
+          fi
+      - name: Build public files only
+        run: npm run build
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy website and data status
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Report failed upstream synchronization
+        if: needs.build.outputs.sync_failed == 'true'
+        run: |
+          echo '::error::Official data fetch failed. The last valid snapshot and an error status were deployed. Inspect the build logs.'
+          exit 1
