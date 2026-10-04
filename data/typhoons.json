@@ -7,26 +7,26 @@
     "activeEndpoint": "https://typhoon.slt.zj.gov.cn/Api/TyhoonActivity",
     "detailEndpoint": "https://typhoon.slt.zj.gov.cn/Api/TyphoonInfo/"
   },
-  "fetchedAt": "2026-10-04T20:07:12.436Z",
-  "sourceUpdatedAt": "2026-10-04T18:00:00.000Z",
+  "fetchedAt": "2026-10-04T23:18:34.559Z",
+  "sourceUpdatedAt": "2026-10-04T21:00:00.000Z",
   "storms": [
     {
       "id": "202627",
       "name": "彩云",
       "english": "CHOI-WAN",
       "active": true,
-      "observedAt": "2026-10-04T18:00:00.000Z",
-      "time": "2026-10-04T18:00:00.000Z",
-      "lon": 147.1,
-      "lat": 24.3,
+      "observedAt": "2026-10-04T21:00:00.000Z",
+      "time": "2026-10-04T21:00:00.000Z",
+      "lon": 146.8,
+      "lat": 24.7,
       "level": 17,
       "speed": 58,
       "pressure": 925,
       "strength": "超强台风",
-      "move": 18,
+      "move": 20,
       "direction": "北北西",
-      "position": "距离日本东京南偏东方向约1460公里",
-      "trend": "“彩云”将以每小时20-25公里的速度向北偏西方向移动，强度逐渐减弱",
+      "position": "距离日本东京南偏东方向约1400公里",
+      "trend": "“彩云”将以每小时20公里左右的速度向北偏西方向移动，强度缓慢减弱",
       "history": [
         {
           "time": "2026-09-30T18:00:00.000Z",
@@ -324,65 +324,65 @@
           "speed": 58,
           "pressure": 925,
           "strength": "超强台风"
+        },
+        {
+          "time": "2026-10-04T21:00:00.000Z",
+          "lon": 146.8,
+          "lat": 24.7,
+          "level": 17,
+          "speed": 58,
+          "pressure": 925,
+          "strength": "超强台风"
         }
       ],
       "forecasts": [
         {
           "source": "中国",
-          "issuedAt": "2026-10-04T18:00:00.000Z",
+          "issuedAt": "2026-10-04T21:00:00.000Z",
           "points": [
             {
-              "time": "2026-10-05T06:00:00.000Z",
-              "lon": 146.3,
-              "lat": 26.1,
+              "time": "2026-10-05T09:00:00.000Z",
+              "lon": 146.1,
+              "lat": 26.7,
               "level": 17,
               "speed": 58,
               "pressure": 925,
               "strength": "超强台风"
             },
             {
-              "time": "2026-10-05T18:00:00.000Z",
-              "lon": 145.8,
-              "lat": 28.3,
+              "time": "2026-10-05T21:00:00.000Z",
+              "lon": 145.7,
+              "lat": 28.9,
               "level": 16,
               "speed": 55,
               "pressure": 930,
               "strength": "超强台风"
             },
             {
-              "time": "2026-10-06T06:00:00.000Z",
-              "lon": 146.5,
-              "lat": 31.5,
+              "time": "2026-10-06T09:00:00.000Z",
+              "lon": 147.1,
+              "lat": 32.5,
               "level": 15,
               "speed": 50,
               "pressure": 940,
               "strength": "强台风"
             },
             {
-              "time": "2026-10-06T18:00:00.000Z",
-              "lon": 149.8,
-              "lat": 36.2,
+              "time": "2026-10-06T21:00:00.000Z",
+              "lon": 151.3,
+              "lat": 37.7,
               "level": 14,
               "speed": 42,
               "pressure": 955,
               "strength": "强台风"
             },
             {
-              "time": "2026-10-07T06:00:00.000Z",
-              "lon": 156.7,
-              "lat": 42.5,
+              "time": "2026-10-07T09:00:00.000Z",
+              "lon": 159.2,
+              "lat": 44.4,
               "level": 11,
               "speed": 30,
               "pressure": 970,
-              "strength": "强热带风暴"
-            },
-            {
-              "time": "2026-10-07T18:00:00.000Z",
-              "lon": 165.7,
-              "lat": 50.3,
-              "level": 10,
-              "speed": 25,
-              "pressure": 975,
               "strength": "强热带风暴"
             }
           ]
