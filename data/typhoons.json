@@ -7,26 +7,26 @@
     "activeEndpoint": "https://typhoon.slt.zj.gov.cn/Api/TyhoonActivity",
     "detailEndpoint": "https://typhoon.slt.zj.gov.cn/Api/TyphoonInfo/"
   },
-  "fetchedAt": "2026-11-08T15:05:19.742Z",
-  "sourceUpdatedAt": "2026-11-08T12:00:00.000Z",
+  "fetchedAt": "2026-11-08T19:38:53.373Z",
+  "sourceUpdatedAt": "2026-11-08T18:00:00.000Z",
   "storms": [
     {
       "id": "202632",
       "name": "查帕卡",
       "english": "CEMPAKA",
       "active": true,
-      "observedAt": "2026-11-08T12:00:00.000Z",
-      "time": "2026-11-08T12:00:00.000Z",
-      "lon": 136.4,
-      "lat": 22.4,
+      "observedAt": "2026-11-08T18:00:00.000Z",
+      "time": "2026-11-08T18:00:00.000Z",
+      "lon": 135.7,
+      "lat": 22.8,
       "level": 12,
       "speed": 33,
       "pressure": 975,
       "strength": "台风",
-      "move": 16,
+      "move": 12,
       "direction": "北西",
-      "position": "距离美国关岛西北方向约1330公里",
-      "trend": "“查帕卡”将以每小时15-20公里的速度向西北方向移动，强度逐渐增强",
+      "position": "距离美国关岛西北方向约1420公里",
+      "trend": "“查帕卡”将以每小时10-15公里的速度向西北方向移动，强度逐渐增强",
       "history": [
         {
           "time": "2026-11-07T06:00:00.000Z",
@@ -126,25 +126,43 @@
           "speed": 33,
           "pressure": 975,
           "strength": "台风"
+        },
+        {
+          "time": "2026-11-08T15:00:00.000Z",
+          "lon": 136.1,
+          "lat": 22.7,
+          "level": 12,
+          "speed": 33,
+          "pressure": 975,
+          "strength": "台风"
+        },
+        {
+          "time": "2026-11-08T18:00:00.000Z",
+          "lon": 135.7,
+          "lat": 22.8,
+          "level": 12,
+          "speed": 33,
+          "pressure": 975,
+          "strength": "台风"
         }
       ],
       "forecasts": [
         {
           "source": "中国",
-          "issuedAt": "2026-11-08T12:00:00.000Z",
+          "issuedAt": "2026-11-08T18:00:00.000Z",
           "points": [
             {
-              "time": "2026-11-09T00:00:00.000Z",
-              "lon": 135.1,
-              "lat": 23.5,
+              "time": "2026-11-09T06:00:00.000Z",
+              "lon": 134.7,
+              "lat": 23.7,
               "level": 13,
               "speed": 38,
               "pressure": 965,
               "strength": "台风"
             },
             {
-              "time": "2026-11-09T12:00:00.000Z",
-              "lon": 135.3,
+              "time": "2026-11-09T18:00:00.000Z",
+              "lon": 136,
               "lat": 24.2,
               "level": 14,
               "speed": 45,
@@ -152,48 +170,39 @@
               "strength": "强台风"
             },
             {
-              "time": "2026-11-10T00:00:00.000Z",
-              "lon": 137.5,
+              "time": "2026-11-10T06:00:00.000Z",
+              "lon": 138.8,
               "lat": 24.7,
-              "level": 14,
-              "speed": 42,
-              "pressure": 955,
-              "strength": "强台风"
-            },
-            {
-              "time": "2026-11-10T12:00:00.000Z",
-              "lon": 141.1,
-              "lat": 25.2,
               "level": 13,
-              "speed": 38,
-              "pressure": 965,
+              "speed": 40,
+              "pressure": 960,
               "strength": "台风"
             },
             {
-              "time": "2026-11-11T00:00:00.000Z",
-              "lon": 144.7,
-              "lat": 26.1,
-              "level": 11,
-              "speed": 30,
-              "pressure": 980,
+              "time": "2026-11-10T18:00:00.000Z",
+              "lon": 142.2,
+              "lat": 25.4,
+              "level": 12,
+              "speed": 33,
+              "pressure": 975,
+              "strength": "台风"
+            },
+            {
+              "time": "2026-11-11T06:00:00.000Z",
+              "lon": 145.7,
+              "lat": 26.2,
+              "level": 10,
+              "speed": 25,
+              "pressure": 985,
               "strength": "强热带风暴"
             },
             {
-              "time": "2026-11-11T12:00:00.000Z",
+              "time": "2026-11-11T18:00:00.000Z",
               "lon": 149,
-              "lat": 26.6,
+              "lat": 26.1,
               "level": 8,
               "speed": 20,
               "pressure": 995,
-              "strength": "热带风暴"
-            },
-            {
-              "time": "2026-11-12T12:00:00.000Z",
-              "lon": 154.7,
-              "lat": 26.1,
-              "level": 8,
-              "speed": 18,
-              "pressure": 998,
               "strength": "热带风暴"
             }
           ]
