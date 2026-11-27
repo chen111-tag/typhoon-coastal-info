@@ -7,7 +7,7 @@
     "activeEndpoint": "https://typhoon.slt.zj.gov.cn/Api/TyhoonActivity",
     "detailEndpoint": "https://typhoon.slt.zj.gov.cn/Api/TyphoonInfo/"
   },
-  "fetchedAt": "2026-11-26T02:17:50.420Z",
+  "fetchedAt": "2026-11-27T02:58:42.897Z",
   "sourceUpdatedAt": null,
   "storms": [],
   "warningStatus": "not-connected"
